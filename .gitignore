@@ -1,0 +1,7 @@
+.next/
+out/
+node_modules/
+coverage/
+.DS_Store
+*.log
+next-env.d.ts

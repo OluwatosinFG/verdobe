@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #1B3A2D;
+  --color-forest-dark: #132d21;
+  --color-brand-slate: #4A5568;
+  --color-brand-slate-dark: #374151;
+  --color-brand-orange: #E8570A;
+  --color-orange-deep: #7C2D12;
+  --color-orange-darker: #6b2500;
+  --color-orange-light: #f47b45;
+  --color-cream: #F7F3EC;
+  --color-ink: #0D0D0D;
+  --color-sage: #7A9E82;
+  --color-slate-lt: #A0AEC0;
+
+  --font-bebas: var(--font-var-bebas), sans-serif;
+  --font-playfair: var(--font-var-playfair), serif;
+  --font-plex: var(--font-var-plex), monospace;
+  --font-lato: var(--font-var-lato), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@keyframes slash-drop {
+  from {
+    opacity: 0;
+    transform: rotate(8deg) scaleY(0);
+    transform-origin: top;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(8deg) scaleY(1);
+    transform-origin: top;
+  }
+}
+
+@keyframes fade-slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slash-drop {
+  animation: slash-drop 1s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+.animate-fade-left {
+  animation: fade-slide-left 0.9s ease forwards;
+}
+
+.animate-fade-right {
+  animation: fade-slide-right 0.9s 0.2s ease both;
+}
+
+.biz-card:hover {
+  transform: rotate(0deg) scale(1.02);
+}
